@@ -1,6 +1,6 @@
 feature "viewing secret santa" do
   scenario "visiting the index page" do
-    visit ("/")
-    expect(page).to have_content "Secret Santa app"
+    visit ("/secret-santa-generator")
+    expect(page).to have_field("Enter name")
   end
 end
