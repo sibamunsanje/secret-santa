@@ -1,10 +1,30 @@
 <h1>Secret Santa Generator</h1>
+<div class="column" style="text-align:left">
 <h2>Your name</h2>
-<form action="/secret-santa-generator">
-  <label for="name"></label>
-    <input type="text" placeholder="Enter name" name="your name" required>
-  <input type="submit" value="Submit">
-  <label for="email"></label>
-      <input type="text" placeholder="Enter Email" name="email" required>
-</form>
+  <form action="/secret-santa-generator" method="post">
+    <label for="name"></label>
+   <input type="text" placeholder="Enter name" name="your name" required>
 <h2>Draw names with</h2>
+
+       <input type="text" id="name" name="Enter name" placeholder="Enter Name">
+       <br>
+       <input type="text" id="name" name="Enter name" placeholder="Enter Name">
+       <br>
+       <input type="text" id="name" name="Enter name" placeholder="Enter Name">
+       <br>
+       <input type="text" id="name" name="Enter name" placeholder="Enter Name">
+       <br>
+       <input type="button" value="Add more names"
+       <br>
+<h2>Or</h2>
+        <input type="submit" value="Submit">
+
+     </form>
+</div>
+<div style="text-align:left">
+<h2>Is the group complete?</h2>
+     <input type="radio" name="option" value="Yes"> Yes, all names have been added<br>
+     <input type="radio" name="option" value="No"> No, more names may be added<br>
+     <br>
+     <input type="submit" value="Next Step">
+</div>

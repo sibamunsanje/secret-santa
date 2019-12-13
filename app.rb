@@ -4,11 +4,17 @@ require "sinatra/base"
 
 class SecretSanta < Sinatra::Base
 
-  
+
   get "/secret-santa-generator" do
-    erb(:index)
+    # @uEntername = params[:Entername]
+    # puts params
+     erb(:index)
 
   end
+
+
+
+
 
   run! if app_file == $0
 end
