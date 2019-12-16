@@ -1,15 +1,9 @@
-require "data_mapper_setup"
+require "./data_mapper_setup.rb"
 
 class Participant
-
   include DataMapper::Resource
 
-  def initialiaze(name, email)
-     @name = name
-     @email = email
-  end
-
-  property :email,      String
-  property :name,        String
+  property :email, String, :key => true
+  property :name, String,  :key => true
 
 end

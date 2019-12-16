@@ -1,23 +1,17 @@
 require "sinatra/base"
 require "data_mapper"
+require_relative "data_mapper_setup.rb"
 
 #runs on local host 9292 when I run rackup
 
-class SecretSanta < Sinatra::Base
+class SecretSantaApp < Sinatra::Base
 
+  post "/secret-santa-generator" do
 
-  get "/secret-santa-generator" do
-    # @uEntername = params[:Entername]
-    # puts params
-     erb(:index)
-  end
+      @participant = Participant.new(:name => "siba",:email => "sibaj@hotmail.co.uk")
+      @participant.save
 
-  post "/participant" do
-    
-      {name: "siba", email:"sibaj@hotmail.co.uk"}
-
-      participant = Participant.new(name, email)
-      participant.save
+      erb(:index)
 
   end
 
